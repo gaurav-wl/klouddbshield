@@ -53,8 +53,6 @@ type App struct {
 	VerboseHBASacanner bool
 }
 
-var CONF *Config
-
 var Version = "dev"
 
 func NewConfig() (*Config, error) {
@@ -207,7 +205,6 @@ func NewConfig() (*Config, error) {
 		fmt.Printf("Enter Your DB Postgres Password for %s: ", c.Postgres.User)
 		fmt.Scanln(&c.Postgres.Password)
 	}
-	CONF = c
 	return c, nil
 }
 
